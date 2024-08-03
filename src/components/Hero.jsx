@@ -61,16 +61,16 @@ export default function Hero() {
                   </svg>
                 </a>
               </div>
-              <div className="second-slogan right-0 top-4 absolute text-lg text-slate-100">
+              <div className="second-slogan right-0 top-4 absolute text-xl text-slate-100">
                 More than <span className="font-bold">842K</span> visitors -
                 <br />
                 Experience Our Trusted Excellence!
-                <div className="visitors">
-                    <div className="visitor-member flex">
-                        <img className="w-10 h-10 bg-slate-50 rounded-full" src="" alt="" />
-                        <img className="w-10 h-10 bg-slate-50 rounded-full" src="" alt="" />
-                        <img className="w-10 h-10 bg-slate-50 rounded-full" src="" alt="" />
-                        <img className="w-10 h-10 bg-slate-50 rounded-full" src="" alt="" />
+                <div className="visitors flex mt-2 ml-8">
+                    <div className="visitor-member flex p-[6px] rounded-full bg-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
+                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
                     </div>
                 </div>
               </div>
