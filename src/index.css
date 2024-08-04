@@ -24,3 +24,12 @@
 .visitors .visitor-member {
   gap: -8px;
 }
+
+.card-villas, .card-resorts {
+  overflow-x: auto;
+  scrollbar-width: none; /* Add this */
+}
+
+.card-villas::-webkit-scrollbar .card-resorts::-webkit-scrollbar {
+  display: none; /* Add this */
+}

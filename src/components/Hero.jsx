@@ -10,8 +10,8 @@ export default function Hero() {
         <Navigation />
         <div className="hero-slogan mt-[6rem]">
           <div className="main-slogan flex w-full flex-col gap-3">
-            <p className="text-slate-100">Discover Your Personal Paradise.</p>
-            <h1 className="slogan text-slate-100 text-[4rem]  leading-tight">
+            <p className="text-slate-100 items-center gap-2 inline-flex"><span className="w-14 h-[1px] rounded-full bg-slate-100"></span>Discover Your Personal Paradise.</p>
+            <h1 className="slogan text-slate-100 text-[4rem] leading-tight">
               Finding Homestay?
               <br />
               StayInAja Here.
