@@ -59,3 +59,5 @@ export default function Card({name, price, location, rating, visitors}) {
     </>
   );
 }
+
+

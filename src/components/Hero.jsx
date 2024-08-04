@@ -10,7 +10,10 @@ export default function Hero() {
         <Navigation />
         <div className="hero-slogan mt-[6rem]">
           <div className="main-slogan flex w-full flex-col gap-3">
-            <p className="text-slate-100 items-center gap-2 inline-flex"><span className="w-14 h-[1px] rounded-full bg-slate-100"></span>Discover Your Personal Paradise.</p>
+            <p className="text-slate-100 items-center gap-2 inline-flex">
+              <span className="w-14 h-[1px] rounded-full bg-slate-100"></span>
+              Discover Your Personal Paradise.
+            </p>
             <h1 className="slogan text-slate-100 text-[4rem] leading-tight">
               Finding Homestay?
               <br />
@@ -65,14 +68,55 @@ export default function Hero() {
                 More than <span className="font-bold">842K</span> visitors -
                 <br />
                 Experience Our Trusted Excellence!
-                <div className="visitors flex mt-2 ml-8">
-                    <div className="visitor-member flex p-[6px] rounded-full bg-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
-                        <img className="w-9 h-9 bg-slate-100 rounded-full" src="" alt="" />
-                        <img className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full" src="" alt="" />
-                        <img className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full" src="" alt="" />
-                        <img className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full" src="" alt="" />
-                        <a href="" className="more-visitor-btn w-9 text-[9px] text=cent h-9 ml-[-8px] inline-flex items-center justify-center border border-slate-100 rounded-full">More</a>
-                    </div>
+                <div className="visitors flex items-center mt-2 ml-8">
+                  <div className="visitor-member flex p-[6px] rounded-full bg-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
+                    <img
+                      className="w-9 h-9 bg-slate-100 rounded-full"
+                      src=""
+                      alt=""
+                    />
+                    <img
+                      className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full"
+                      src=""
+                      alt=""
+                    />
+                    <img
+                      className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full"
+                      src=""
+                      alt=""
+                    />
+                    <img
+                      className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full"
+                      src=""
+                      alt=""
+                    />
+                    <a
+                      href=""
+                      className="more-visitor-btn w-9 text-[9px] text=cent h-9 ml-[-8px] inline-flex items-center justify-center border border-slate-100 rounded-full"
+                    >
+                      More
+                    </a>
+                  </div>
+
+                  <div className="visitor-sign ml-2 inline-flex items-center gap-2">
+                    <svg
+                      class="w-8 h-8 text-slate-200 dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1"
+                        d="M5 12h14M5 12l4-4m-4 4 4 4"
+                      />
+                    </svg>
+
+                    <h3 className="text-[16px]">Visitors</h3>
+                  </div>
                 </div>
               </div>
             </div>
