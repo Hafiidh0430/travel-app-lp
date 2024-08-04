@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="hero w-full h-full absolute top-0 left-0 -z-10"></div>
       <div className="welcome h-dvh">
         <Navigation />
-        <div className="hero-slogan mt-[8rem]">
+        <div className="hero-slogan mt-[6rem]">
           <div className="main-slogan flex w-full flex-col gap-3">
             <p className="text-slate-100">Discover Your Personal Paradise.</p>
             <h1 className="slogan text-slate-100 text-[4rem]  leading-tight">
@@ -22,7 +22,7 @@ export default function Hero() {
                   className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-100 rounded-full"
                   href=""
                 >
-                  Explore resources{" "}
+                  Explore resources
                   <svg
                     class="w-7 h-7 rounded-full text-slate-100 p-1 bg-gray-950 dark:text-white"
                     aria-hidden="true"
@@ -61,22 +61,24 @@ export default function Hero() {
                   </svg>
                 </a>
               </div>
-              <div className="second-slogan right-0 top-4 absolute text-xl text-slate-100">
+              <div className="second-slogan right-0 top-4 absolute text-lg text-slate-100">
                 More than <span className="font-bold">842K</span> visitors -
                 <br />
                 Experience Our Trusted Excellence!
                 <div className="visitors flex mt-2 ml-8">
                     <div className="visitor-member flex p-[6px] rounded-full bg-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
-                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
-                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
-                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
-                        <img className="w-10 h-10 bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-9 h-9 bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full" src="" alt="" />
+                        <img className="w-9 h-9 ml-[-8px] bg-slate-100 rounded-full" src="" alt="" />
+                        <a href="" className="more-visitor-btn w-9 text-[9px] text=cent h-9 ml-[-8px] inline-flex items-center justify-center border border-slate-100 rounded-full">More</a>
                     </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="width w-full h-24 bg-white absolute left-0 bottom-[-2.5rem] rounded-t-[4rem]"></div>
       </div>
     </>
   );
