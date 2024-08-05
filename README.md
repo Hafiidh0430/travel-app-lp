@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite + Tailwind + Express & Prisma (next time)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
