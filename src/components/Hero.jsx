@@ -6,9 +6,9 @@ export default function Hero() {
   return (
     <>
       <div className="hero w-full h-full absolute top-0 left-0 -z-10"></div>
-      <div className="welcome h-dvh">
+      <div className="welcome h-dvh ">
         <Navigation />
-        <div className="hero-slogan mt-[6rem]">
+        <div className="hero-slogan flex justify-start items-start mt-[16vh]">
           <div className="main-slogan flex w-full flex-col gap-3">
             <p className="text-slate-100 items-center gap-2 inline-flex">
               <span className="w-14 h-[1px] rounded-full bg-slate-100"></span>

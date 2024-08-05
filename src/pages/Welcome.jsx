@@ -5,6 +5,9 @@ import Hero from "../components/Hero";
 import Card from "../components/Card";
 import Category from "../components/Category";
 import CardDestination from "../components/CardDestination";
+import CardTestimonal from "../components/CardTestimonal";
+import Accordion from "../components/Accordion";
+import Footer from "../components/Footer";
 
 export default function welcome() {
   const villas = [
@@ -82,70 +85,85 @@ export default function welcome() {
 
   const testimonials = [
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
     {
-      user: 'Sinta Maharani',
-      profession: 'Doctor',
-      message: "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free."
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
     },
-  ]
+    {
+      user: "Sinta Maharani",
+      profession: "Doctor",
+      message:
+        "After using your platform to find a place to crash, I gotta say, I'm stoked! It was so easy and hassle-free.",
+    },
+  ];
 
   const [category, setCategory] = useState("");
+  const [accordion, setAccordion] = useState(Number);
 
-  useEffect(() => {
-    console.log(category);
-  }, [category]);
+  console.log(accordion);
   return (
     <>
       <Layout>
         <Hero />
-        <div className="main-content">
+        <div className="main-content ">
           <div className="villa-section">
             <header className="header-villa-section flex flex-col gap-2">
-              <h3 className="w-fit category-content text-lg px-5 py-[8px] rounded-full bg-slate-200">
+              <h3 className="w-fit category-content text-lg px-5 py-[6px] rounded-full bg-slate-200">
                 Most Visited.
               </h3>
               <h1 className="slogan text-[2.5rem]">
@@ -153,7 +171,11 @@ export default function welcome() {
                 <br /> Popular Villas.
               </h1>
               <div className="category-btn flex justify-between">
-                <Category category={category} setCategory={setCategory} />
+                <Category
+                  key={category}
+                  category={category}
+                  setCategory={setCategory}
+                />
                 <a
                   className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
@@ -192,16 +214,20 @@ export default function welcome() {
             </div>
           </div>
 
-          <div className="resort-section mt-16">
+          <div className="resort-section mt-20">
             <header className="header-resort-section flex flex-col gap-2">
-              <h3 className="w-fit category-content text-lg px-5 py-[8px] rounded-full bg-slate-200">
+              <h3 className="w-fit category-content text-lg px-5 py-[6px] rounded-full bg-slate-200">
                 Strategic Areas.
               </h3>
               <h1 className="slogan text-[2.5rem]">
                 Indulge in Luxury at Our Strategically <br /> Located Resorts.
               </h1>
               <div className="category-btn flex justify-between">
-                <Category category={category} setCategory={setCategory} />
+                <Category
+                  key={category}
+                  category={category}
+                  setCategory={setCategory}
+                />
                 <a
                   className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
@@ -255,7 +281,11 @@ export default function welcome() {
                 </p>
               </div>
               <div className="category-btn flex justify-between">
-                <Category category={category} setCategory={setCategory} />
+                <Category
+                  key={category}
+                  category={category}
+                  setCategory={setCategory}
+                />
                 <a
                   className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
@@ -281,26 +311,104 @@ export default function welcome() {
             </header>
             <div className="card-destination mt-8 grid grid-cols-4 gap-4">
               {destinations.map(({ title, visitors }) => {
-                return <CardDestination title={title} visitors={visitors} />;
+                return (
+                  <CardDestination
+                    key={title}
+                    title={title}
+                    visitors={visitors}
+                  />
+                );
               })}
             </div>
           </div>
 
-          <div className="testimonial-section mt-16">
+          <div className="testimonial-section mt-20">
             <header className="header-destination-section flex flex-col gap-2">
               <h3 className="w-fit category-content text-lg py-[4px]">
-              Their Experience is Our Happiness.
+                Their Experience is Our Happiness.
               </h3>
               <div className="slogan-destination flex justify-between">
-                <h1 className="slogan text-[2.5rem]">
-                They Make Us Grow.
-                </h1>
+                <h1 className="slogan text-[2.5rem]">They Make Us Grow.</h1>
               </div>
             </header>
-            <div className="card-destination mt-8 grid grid-cols-4 gap-4">
-             
-            </div>
           </div>
+        </div>
+      </Layout>
+      <div className="card-destination flex flex-col relative gap-4 mt-4">
+        <div className="shape-right h-full bg-gradient-to-r from-white to-transparent w-[32rem] absolute"></div>
+        <div className="shape-left h-full bg-gradient-to-l right-0 from-white to-transparent w-[32rem] absolute"></div>
+        <div className="cards grid grid-cols-4 w-full gap-4">
+          {testimonials.slice(0, 4).map(({ user, profession, message }) => {
+            return (
+              <CardTestimonal
+                key={message}
+                user={user}
+                profesion={profession}
+                message={message}
+              />
+            );
+          })}
+        </div>
+        <div className="cards w-full grid grid-cols-4 gap-4">
+          {testimonials.slice(4, 8).map(({ user, profession, message }) => {
+            return (
+              <CardTestimonal
+                key={message}
+                user={user}
+                profesion={profession}
+                message={message}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      <Layout>
+        <div className="faq-section mt-20">
+          <header className="header-destination-section relative flex flex-col gap-2">
+            <h3 className="w-fit category-content text-lg py-[4px]">
+              StayInAja’s FAQ.
+            </h3>
+            <div className="slogan-destination flex justify-between">
+              <h1 className="slogan text-[2.5rem]">
+                Most Asked by <br />
+                People.
+              </h1>
+              <p className="w-[24rem] text-justify">
+                If you have questions, we have answers for you here. In case we
+                don’t, please feel free to reach out to us here{" "}
+                <span className="font-bold underline">
+                  stayinajacontactid@gmail.com
+                </span>
+              </p>
+            </div>
+            <span className="line absolute bottom-0 top-44 rounded-full w-full h-[1px] bg-slate-950"></span>
+          </header>
+          <div className="faq-content mt-10 flex justify-between items-start">
+            <h3 className="accordion-direction inline-flex items-center gap-3 font-bold text-2xl">
+              May it will help you{" "}
+              <svg
+                class="w-12 h-12 text-gray-950 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M19 12H5m14 0-4 4m4-4-4-4"
+                />
+              </svg>
+            </h3>
+            <Accordion accordion={accordion} setAccordion={setAccordion} />
+          </div>
+        </div>
+
+        <div className="footer mt-24">
+          <Footer />
         </div>
       </Layout>
     </>
