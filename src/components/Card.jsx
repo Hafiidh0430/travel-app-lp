@@ -5,7 +5,7 @@ export default function Card({name, price, location, rating, visitors}) {
     <>
       <a href="" className="card-container mt-8 flex flex-col gap-3">
         <div className="bg-card w-[16rem] h-[16rem] rounded-xl bg-slate-300 relative">
-          <h3 className="price text-[14px] absolute bottom-0 right-0 mb-3 mr-3 px-4 py-2 rounded-lg bg-slate-200">
+          <h3 className="price text-sm absolute bottom-0 right-0 mb-3 mr-3 px-4 py-2 rounded-lg bg-slate-200">
             Rp. {price}
           </h3>
           {/* <img src="" alt="" className="img-card w-full h-full rounded-xl bg-slate-100" /> */}
@@ -52,7 +52,7 @@ export default function Card({name, price, location, rating, visitors}) {
                 <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
               </svg>
             </div>
-            <h5 className="visitors-count text-[14px]">{visitors} visitors</h5>
+            <h5 className="visitors-count text-sm">{visitors} visitors</h5>
           </div>
         </div>
       </a>

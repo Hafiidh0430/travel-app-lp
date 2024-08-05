@@ -22,7 +22,7 @@ export default function Hero() {
             <div className="second-slogan relative flex justify-between">
               <div className="hero-cta-btn flex gap-4">
                 <a
-                  className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-100 rounded-full"
+                  className="inline-flex items-center text-sm gap-2 pl-4 pr-1 py-1 bg-slate-100 rounded-full"
                   href=""
                 >
                   Explore resources
@@ -43,7 +43,7 @@ export default function Hero() {
                   </svg>
                 </a>
                 <a
-                  className="inline-flex bg-slate-50 text-slate-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 items-center text-[14px]  pl-4 pr-1 py-1 rounded-full"
+                  className="inline-flex bg-slate-50 text-slate-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 items-center text-sm  pl-4 pr-1 py-1 rounded-full"
                   href=""
                 >
                   See us

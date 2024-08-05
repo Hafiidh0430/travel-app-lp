@@ -177,7 +177,7 @@ export default function welcome() {
                   setCategory={setCategory}
                 />
                 <a
-                  className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
+                  className="inline-flex items-center text-sm gap-3 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
                 >
                   See more
@@ -229,7 +229,7 @@ export default function welcome() {
                   setCategory={setCategory}
                 />
                 <a
-                  className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
+                  className="inline-flex items-center text-sm gap-3 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
                 >
                   See more
@@ -287,7 +287,7 @@ export default function welcome() {
                   setCategory={setCategory}
                 />
                 <a
-                  className="inline-flex items-center text-[14px] gap-2 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
+                  className="inline-flex items-center text-sm gap-3 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
                 >
                   More categories
@@ -407,10 +407,10 @@ export default function welcome() {
           </div>
         </div>
 
-        <div className="footer mt-24">
+      </Layout>
+        <div className="footer mb-12 mx-20 mt-28">
           <Footer />
         </div>
-      </Layout>
     </>
   );
 }
