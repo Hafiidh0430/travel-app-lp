@@ -33,3 +33,9 @@
 .card-villas::-webkit-scrollbar .card-resorts::-webkit-scrollbar {
   display: none; /* Add this */
 }
+
+@media screen and (min-width: 1920px) {
+  :root{
+    font-size: 1vw;
+  }
+}
