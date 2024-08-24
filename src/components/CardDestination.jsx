@@ -9,7 +9,7 @@ export default function CardDestination({title, visitors}) {
         </div>
 
         <div className="card-details flex flex-col text-slate-700">
-          <h3 className="title-destination font-bold text-lg">{title}</h3>
+          <h3 className="title-destination font-bold text-md">{title}</h3>
           <h4 className="visitors-destination text-sm">{visitors} visitors</h4>
         </div>
       </div>

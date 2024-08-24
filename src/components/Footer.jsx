@@ -4,9 +4,9 @@ import Star from "../assets/components/Star.png";
 export default function Footer() {
   return (
     <>
-      <footer className="footer-container text-white p-[4rem] rounded-[4rem] bg-gray-950">
-        <header className="footer-header gap-4 relative flex flex-col items-center">
-          <h4 className="text-book w-[46rem] text-center text-xl lg:text-2xl">
+      <footer className="footer-container text-white max-md:w-full p-[4rem] max-md:rounded-none rounded-[4rem] bg-gray-950">
+        <header className="footer-header gap-6 relative flex flex-col items-center">
+          <h4 className="text-book text-center text-xl lg:text-2xl">
             Let’s book today and take advantage of our services. We’re always
             waiting your arrival for 24 hours, don’t miss out for all surprise
             of us!
@@ -25,11 +25,11 @@ export default function Footer() {
               Book now
             </a>
           </div>
-          <span className="line absolute bottom-0  top-[9.5rem] rounded-full w-full h-[1px] bg-white"></span>
+          <span className="line block mt-4 rounded-full w-full h-[1px] bg-white"></span>
         </header>
 
-        <div className="footer-body h-[10rem] mt-16 flex justify-between">
-          <div className="left-section-footer flex flex-col justify-between">
+        <div className="footer-body mt-12 flex max-md:flex-col max-md:gap-8 justify-between">
+          <div className="left-section-footer flex flex-col gap-4 justify-between">
             <div className="catalog flex flex-col gap-3">
               <h5 className="text-3xl">Catalog.</h5>
               <div className="sub-catalog text-sm flex flex-wrap w-80">
@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
             <h5 className="copyright text-xl">@2024 ~ Copyright.</h5>
           </div>
-          <div className="right-section-footer w-[22rem] h-fit flex flex-wrap gap-6">
+          <div className="right-section-footer lg:w-[22rem] h-fit flex flex-wrap gap-6">
             <div className="contact">
               <h3>Contact.</h3>
               <p className="text-sm text-slate-500">( +62 817-000-3267 )</p>

@@ -6,6 +6,8 @@ export default function Category({ category, setCategory }) {
     "Bali",
     "Bogor",
     "Bandung",
+    "Malang",
+    "Yogyakarta",
   ];
 
   return (
@@ -16,10 +18,10 @@ export default function Category({ category, setCategory }) {
             <button
               key={data}
               onClick={() => memo(setCategory(data), [])}
-              className={`max-md:text-sm sm:py-1 ${
+              className={`categories max-md:text-sm  px-4 ${
                 data === category
-                  ? "bg-slate-200 category-villa rounded-full px-4 py-1"
-                  : "category-villa hover:bg-slate-200 border border-slate-600  hover:border-none rounded-full px-4 py-1"
+                  ? "bg-slate-200 category-villa rounded-full"
+                  : "category-villa hover:bg-slate-200 border border-slate-600  hover:border-none rounded-full"
               }`}
             >
               {data}

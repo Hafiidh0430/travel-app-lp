@@ -35,11 +35,11 @@ export default function Accordion({ accordion, setAccordion }) {
   ];
   return (
     <>
-      <div className="accordions flex flex-col gap-8">
+      <div className="accordions flex max-sm:w-full flex-col gap-8">
         {faq.map(({ id, question, answer }) => {
           return (
             <>
-              <div key={id} className="accordion w-[24rem] flex flex-col gap-7">
+              <div key={id} className="accordion w-[24rem] max-sm:w-full flex flex-col gap-7">
                 <header onClick={() => memo(setAccordion(id), [])} className="accordion-header cursor-pointer relative justify-between flex">
                   <h4 className="text-lg font-bold">{question}</h4>
                   <svg

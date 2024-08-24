@@ -180,7 +180,7 @@ export default function welcome() {
                   className="inline-flex items-center text-sm gap-3 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
                 >
-                  See more
+                  More
                   <svg
                     class="w-7 h-7 rounded-full text-slate-100 p-1 bg-gray-950 dark:text-white"
                     aria-hidden="true"
@@ -214,7 +214,7 @@ export default function welcome() {
             </div>
           </div>
 
-          <div className="resort-section mt-20">
+          <div className="resort-section mt-16">
             <header className="header-villa-section flex flex-col gap-4">
               <div className="">
                 <h1 className="slogan text-[2.5rem]">
@@ -235,7 +235,7 @@ export default function welcome() {
                   className="inline-flex items-center text-sm gap-3 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
                 >
-                  See more
+                  More
                   <svg
                     class="w-7 h-7 rounded-full text-slate-100 p-1 bg-gray-950 dark:text-white"
                     aria-hidden="true"
@@ -271,19 +271,16 @@ export default function welcome() {
 
           <div className="destination-section mt-16">
             <header className="header-destination-section flex flex-col gap-2">
-              <h3 className="w-fit category-content text-lg py-[4px]">
-                Escape to Excellence.
-              </h3>
-              <div className="slogan-destination flex justify-between">
-                <h1 className="slogan text-[2rem]">
-                  Iconic destinations to relax.
+              <div className="slogan-destination flex max-md:flex-col justify-between ">
+                <h1 className="slogan lg:w-[28rem] text-[2.5rem] ">
+                  Iconic destinations, catch your vibes.
                 </h1>
-                <p className="w-[21rem] text-justify">
+                <p className="w-[22rem] text-justify">
                   Explore and feel its charming allure in every corner of the
                   city and enjoy an unforgettable adventure in this destination.
                 </p>
               </div>
-              <div className="category-btn flex justify-between">
+              <div className="category-btn max-md:mt-2 flex justify-between">
                 <Category
                   key={category}
                   category={category}
@@ -293,7 +290,7 @@ export default function welcome() {
                   className="inline-flex items-center text-sm gap-3 pl-4 pr-1 py-1 bg-slate-200 rounded-full"
                   href=""
                 >
-                  More categories
+                  More
                   <svg
                     class="w-7 h-7 rounded-full text-slate-100 p-1 bg-gray-950 dark:text-white"
                     aria-hidden="true"
@@ -312,7 +309,7 @@ export default function welcome() {
                 </a>
               </div>
             </header>
-            <div className="card-destination mt-8 grid grid-cols-4 gap-4">
+            <div className="card-destination max-sm:grid-cols-2 mt-8 grid grid-cols-4 gap-4">
               {destinations.map(({ title, visitors }) => {
                 return (
                   <CardDestination
@@ -324,8 +321,7 @@ export default function welcome() {
               })}
             </div>
           </div>
-
-          <div className="testimonial-section mt-20">
+          <div className="testimonial-section mt-[6rem]">
             <header className="header-destination-section flex flex-col gap-2">
               <h3 className="w-fit category-content text-lg py-[4px]">
                 Their Experience is Our Happiness.
@@ -337,10 +333,12 @@ export default function welcome() {
           </div>
         </div>
       </Layout>
-      {/* <div className="card-destination flex flex-col relative gap-4 mt-4">
-        <div className="shape-right h-full bg-gradient-to-r from-white to-transparent w-[32rem] absolute"></div>
-        <div className="shape-left h-full bg-gradient-to-l right-0 from-white to-transparent w-[32rem] absolute"></div>
-        <div className="cards grid grid-cols-4 w-full gap-4">
+      <div className="card-destination flex flex-col relative gap-4 mt-4">
+        <div className="shape-right h-full bg-gradient-to-r from-white to-transparent max-md:w-[12rem] w-[18rem] absolute"></div>
+        <div className="shape-left h-full bg-gradient-to-l right-0 from-white to-transparent max-md:w-[12rem] w-[18rem] absolute"></div>
+        <div
+          className={` max-md:grid-cols-2 cards grid grid-cols-4 w-full gap-4`}
+        >
           {testimonials.slice(0, 4).map(({ user, profession, message }) => {
             return (
               <CardTestimonal
@@ -352,7 +350,7 @@ export default function welcome() {
             );
           })}
         </div>
-        <div className="cards w-full grid grid-cols-4 gap-4">
+        <div className={`max-md:hidden grid cards w-full grid-cols-4 gap-4`}>
           {testimonials.slice(4, 8).map(({ user, profession, message }) => {
             return (
               <CardTestimonal
@@ -364,18 +362,15 @@ export default function welcome() {
             );
           })}
         </div>
-      </div> */}
+      </div>
       <Layout>
-        {/* <div className="faq-section mt-20">
+        <div className="faq-section mt-[-7rem]">
           <header className="header-destination-section relative flex flex-col gap-2">
             <h3 className="w-fit category-content text-lg py-[4px]">
               StayInAja’s FAQ.
             </h3>
             <div className="slogan-destination flex justify-between">
-              <h1 className="slogan text-[2.5rem]">
-                Most Asked by <br />
-                People.
-              </h1>
+              <h1 className="slogan text-[2.5rem]">Most Asked by People.</h1>
               <p className="w-[24rem] text-justify">
                 If you have questions, we have answers for you here. In case we
                 don’t, please feel free to reach out to us here{" "}
@@ -384,11 +379,11 @@ export default function welcome() {
                 </span>
               </p>
             </div>
-            <span className="line absolute bottom-0 top-44 rounded-full w-full h-[1px] bg-slate-950"></span>
+            <span className="line block rounded-full w-full h-[1px] bg-slate-950"></span>
           </header>
           <div className="faq-content mt-10 flex justify-between items-start">
-            <h3 className="accordion-direction inline-flex items-center gap-3 font-bold text-2xl">
-              May it will help you{" "}
+            <h3 className="max-sm:hidden accordion-direction inline-flex items-center gap-3 font-bold text-2xl">
+              May it will help you
               <svg
                 class="w-12 h-12 text-gray-950 dark:text-white"
                 aria-hidden="true"
@@ -407,9 +402,11 @@ export default function welcome() {
             </h3>
             <Accordion accordion={accordion} setAccordion={setAccordion} />
           </div>
-        </div> */}
+        </div>
       </Layout>
-      <div className="footer mb-12 mx-20 mt-28">{/* <Footer /> */}</div>
+      <div className="footer mb-12 max-md:mx-0 mx-20 mt-28">
+        <Footer />
+      </div>
     </>
   );
 }
