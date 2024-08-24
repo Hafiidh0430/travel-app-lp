@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 export default function Accordion({ accordion, setAccordion }) {
   const faq = [
@@ -40,7 +40,7 @@ export default function Accordion({ accordion, setAccordion }) {
           return (
             <>
               <div key={id} className="accordion w-[24rem] flex flex-col gap-7">
-                <header onClick={() => setAccordion(id)} className="accordion-header cursor-pointer relative justify-between flex">
+                <header onClick={() => memo(setAccordion(id), [])} className="accordion-header cursor-pointer relative justify-between flex">
                   <h4 className="text-lg font-bold">{question}</h4>
                   <svg
                     class="w-6 h-6 text-gray-800 dark:text-white"

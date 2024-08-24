@@ -5,13 +5,13 @@ export default function Card({name, price, location, rating, visitors}) {
     <>
       <a href="" className="card-container mt-8 flex flex-col gap-3">
         <div className="bg-card w-[16rem] h-[16rem] rounded-xl bg-slate-300 relative">
-          <h3 className="price text-sm absolute bottom-0 right-0 mb-3 mr-3 px-4 py-2 rounded-lg bg-slate-200">
+          <h3 className="price max-md:text-[.7rem] max-md:px-3 max-md:py-1 text-sm absolute bottom-0 right-0 max-md:mb-2 max-md:mr-2 mb-3 mr-3 px-4 py-2 rounded-lg bg-slate-200">
             Rp. {price}
           </h3>
           {/* <img src="" alt="" className="img-card w-full h-full rounded-xl bg-slate-100" /> */}
         </div>
         <div className="card-details flex flex-col gap-1">
-          <h4 className="title text-lg font-bold">{name}</h4>
+          <h4 className="title  max-md:text-[1rem] font-bold">{name}</h4>
           <div className="card-location inline-flex items-center gap-2">
             <svg
               class="w-5 h-5 text-gray-500 dark:text-white"
@@ -35,11 +35,11 @@ export default function Card({name, price, location, rating, visitors}) {
                 d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
               />
             </svg>
-            <h3 className="text-slate-700">{location}</h3>
+            <h3 className="text-slate-700 max-md:text-sm">{location}</h3>
           </div>
           <div className="card-rating flex items-center gap-3">
             <div className="ratings inline-flex gap-[6px] items-center">
-              <h4 className="text-[1rem] font-bold">{rating}/<span className="text-[12px]">5</span></h4>
+              <h4 className="text-[1rem] font-bold">{rating}/<span className="text-[.8rem]">5</span></h4>
               <svg
                 class="w-4 h-4 text-yellow-500 dark:text-white"
                 aria-hidden="true"

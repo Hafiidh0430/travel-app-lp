@@ -6,26 +6,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gilroy-Regular', sans-serif;
+  font-family: "Gilroy-Regular", sans-serif;
   /* border: 1px solid #000; */
 }
 
-.hero {
-  background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
-    url('assets/bg_image (1).jpg') no-repeat center;
+.welcome {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("assets/bg_image (1).jpg") no-repeat center;
   background-size: cover;
   object-fit: cover;
 }
 .slogan {
-  font-family: 'Deraga', sans-serif;
-                                                                                           
+  font-family: "Deraga", sans-serif;
 }
 .visitors .visitor-member {
   gap: -8px;
 }
 
-.card-villas, .card-resorts {
+.category-btn::-webkit-scrollbar {
+  display: none;
+  
+}
+
+.card-villas,
+.card-resorts {
   overflow-x: auto;
   scrollbar-width: none; /* Add this */
 }
@@ -34,8 +42,83 @@
   display: none; /* Add this */
 }
 
-@media screen and (min-width: 1920px) {
-  :root{
-    font-size: 1vw;
+.hamburger_menu.active span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  margin-top: 12px;
+}
+
+.hamburger_menu.active span:nth-child(2) {
+  transform: rotate(-45deg);
+  margin-bottom: 8px;
+}
+
+.running-text {
+  animation: running 10s infinite linear;
+}
+
+@keyframes running {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 640px) {
+  :root {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 2.55vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  :root {
+    font-size: 3.2vw;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  :root {
+    font-size: 3.5vw;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  :root {
+    font-size: 3.7vw;
+  }
+}
+
+/* HD (1366x768 piksel) */
+/* @media screen and (min-width: 1366px) and (max-width: 1599px) {
+  :root {
+    font-size: 1.1vw;
+  }
+} */
+
+/* Full HD (1920x1080 piksel) */
+/* @media screen and (min-width: 1600px) and (max-width: 1919px) {
+  :root {
+    font-size: 1.1vw;
+  }
+} */
+
+/* Quad HD (2560x1440 piksel) */
+/* @media screen and (min-width: 1920px) {
+  :root {
+    font-size: 1.1vw;
+  }
+} */

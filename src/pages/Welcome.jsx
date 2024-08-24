@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../Layout";
-import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import Card from "../components/Card";
 import Category from "../components/Category";
@@ -155,21 +154,22 @@ export default function welcome() {
   const [category, setCategory] = useState("");
   const [accordion, setAccordion] = useState(Number);
 
-  console.log(accordion);
   return (
     <>
-      <Layout>
-        <Hero />
-        <div className="main-content ">
-          <div className="villa-section">
-            <header className="header-villa-section flex flex-col gap-2">
-              <h3 className="w-fit category-content text-lg px-5 py-[6px] rounded-full bg-slate-200">
-                Most Visited.
-              </h3>
-              <h1 className="slogan text-[2.5rem]">
-                Experience Luxury at Our Most
-                <br /> Popular Villas.
-              </h1>
+      <Hero />
+      <Layout is_nav={true}>
+        <div className="main-content z-50">
+          <div className="villa-section mt-[-9rem]">
+            <header className="header-villa-section flex flex-col gap-4">
+              <div className="">
+                <h1 className="slogan text-[2.5rem]">
+                  Experience Most Popular Villas.
+                </h1>
+                <p className="text-slate-600">
+                  Lorem ipsum dolor sit amet. Sit quidem vitae qui tempore
+                  maxime eum.
+                </p>
+              </div>
               <div className="category-btn flex justify-between">
                 <Category
                   key={category}
@@ -215,13 +215,16 @@ export default function welcome() {
           </div>
 
           <div className="resort-section mt-20">
-            <header className="header-resort-section flex flex-col gap-2">
-              <h3 className="w-fit category-content text-lg px-5 py-[6px] rounded-full bg-slate-200">
-                Strategic Areas.
-              </h3>
-              <h1 className="slogan text-[2.5rem]">
-                Indulge in Luxury at Our Strategically <br /> Located Resorts.
-              </h1>
+            <header className="header-villa-section flex flex-col gap-4">
+              <div className="">
+                <h1 className="slogan text-[2.5rem]">
+                  Experience Most Popular Villas.
+                </h1>
+                <p className="text-slate-600">
+                  Lorem ipsum dolor sit amet. Sit quidem vitae qui tempore
+                  maxime eum.
+                </p>
+              </div>
               <div className="category-btn flex justify-between">
                 <Category
                   key={category}
@@ -272,8 +275,8 @@ export default function welcome() {
                 Escape to Excellence.
               </h3>
               <div className="slogan-destination flex justify-between">
-                <h1 className="slogan text-[2.5rem]">
-                  Your Iconic Homestays <br /> Adventure Begins.
+                <h1 className="slogan text-[2rem]">
+                  Iconic destinations to relax.
                 </h1>
                 <p className="w-[21rem] text-justify">
                   Explore and feel its charming allure in every corner of the
@@ -334,7 +337,7 @@ export default function welcome() {
           </div>
         </div>
       </Layout>
-      <div className="card-destination flex flex-col relative gap-4 mt-4">
+      {/* <div className="card-destination flex flex-col relative gap-4 mt-4">
         <div className="shape-right h-full bg-gradient-to-r from-white to-transparent w-[32rem] absolute"></div>
         <div className="shape-left h-full bg-gradient-to-l right-0 from-white to-transparent w-[32rem] absolute"></div>
         <div className="cards grid grid-cols-4 w-full gap-4">
@@ -361,10 +364,9 @@ export default function welcome() {
             );
           })}
         </div>
-      </div>
-
+      </div> */}
       <Layout>
-        <div className="faq-section mt-20">
+        {/* <div className="faq-section mt-20">
           <header className="header-destination-section relative flex flex-col gap-2">
             <h3 className="w-fit category-content text-lg py-[4px]">
               StayInAja’s FAQ.
@@ -405,12 +407,9 @@ export default function welcome() {
             </h3>
             <Accordion accordion={accordion} setAccordion={setAccordion} />
           </div>
-        </div>
-
+        </div> */}
       </Layout>
-        <div className="footer mb-12 mx-20 mt-28">
-          <Footer />
-        </div>
+      <div className="footer mb-12 mx-20 mt-28">{/* <Footer /> */}</div>
     </>
   );
 }
