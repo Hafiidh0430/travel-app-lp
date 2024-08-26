@@ -7,9 +7,8 @@ export default function Hero() {
     <>
       {/* <div className="hero w-full h-full absolute top-0 left-0 -z-10"></div> */}
 
-      <div className="welcome relative px-[4rem] flex flex-col items-center gap-[6rem] py-8 max-md:px-[2rem] lg:px-[6rem] h-dvh w-full m-0 z-20 bg-slate-300">
-        <Navigation />
-        <div className="main-slogan max-sm:pt-[25%] max-md:pt-[18%] flex w-full flex-col gap-4">
+      <div className="welcome relative px-[4rem] justify-center flex-col flex items-center gap-8 max-md:px-[2rem] lg:px-[6rem] h-dvh w-full m-0 z-20 bg-slate-300">
+        <div className="main-slogan flex w-full flex-col gap-4">
           <p className="text-slate-100 max-md:text-sm items-center gap-2 inline-flex">
             <span className="w-14 h-[1px] max-md:w-8 rounded-full bg-slate-100"></span>
             Discover Your Personal Paradise.
@@ -64,10 +63,11 @@ export default function Hero() {
                 </svg>
               </a>
             </div>
-            <div className="second-slogan right-0 max-md:top-16 top-4 absolute max-md:text-[1rem] max-md:leading-6 text-lg text-slate-100">
-              More than <span className="font-bold">842K</span> visitors -
-              <br />
-              Experience Our Trusted Excellence!
+          </div>
+        </div>
+        <div className="second-slogan w-full max-md:text-[1rem] max-md:leading-6 text-lg text-slate-100">
+          <div className=" flex items-end flex-col">
+              <h1>More than <span className="font-bold">842K</span> visitors - <br />Experience Our Trusted Excellence!</h1>
               <div className="visitors flex items-center mt-2 ml-8">
                 <div className="visitor-member flex p-[6px] rounded-full bg-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
                   <img
@@ -119,8 +119,8 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
           </div>
-        </div>
       <div className="absolute bottom-[-4.5rem] z-[-1] rounded-t-[2rem] w-full h-24  bg-white"></div>
       </div>
     </>

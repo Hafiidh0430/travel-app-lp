@@ -157,13 +157,13 @@ export default function welcome() {
   return (
     <>
       <Hero />
-      <Layout is_nav={true}>
+      <Layout is_mt>
         <div className="main-content z-50">
           <div className="villa-section mt-[-9rem]">
             <header className="header-villa-section flex flex-col gap-4">
               <div className="">
                 <h1 className="slogan text-[2.5rem]">
-                  Experience Most Popular Villas.
+                  Discover most popular places.
                 </h1>
                 <p className="text-slate-600">
                   Lorem ipsum dolor sit amet. Sit quidem vitae qui tempore
@@ -218,7 +218,7 @@ export default function welcome() {
             <header className="header-villa-section flex flex-col gap-4">
               <div className="">
                 <h1 className="slogan text-[2.5rem]">
-                  Experience Most Popular Villas.
+                  Warming with family here.
                 </h1>
                 <p className="text-slate-600">
                   Lorem ipsum dolor sit amet. Sit quidem vitae qui tempore
@@ -332,45 +332,43 @@ export default function welcome() {
             </header>
           </div>
         </div>
-      </Layout>
-      <div className="card-destination flex flex-col relative gap-4 mt-4">
-        <div className="shape-right h-full bg-gradient-to-r from-white to-transparent max-md:w-[12rem] w-[18rem] absolute"></div>
-        <div className="shape-left h-full bg-gradient-to-l right-0 from-white to-transparent max-md:w-[12rem] w-[18rem] absolute"></div>
-        <div
-          className={` max-md:grid-cols-2 cards grid grid-cols-4 w-full gap-4`}
-        >
-          {testimonials.slice(0, 4).map(({ user, profession, message }) => {
-            return (
-              <CardTestimonal
-                key={message}
-                user={user}
-                profesion={profession}
-                message={message}
-              />
-            );
-          })}
+        <div className="card-testimonial flex flex-col relative gap-4 mt-4">
+          <div className="shape-right h-full bg-gradient-to-r from-white to-transparent max-md:w-[12rem] w-[18rem] absolute"></div>
+          <div className="shape-left h-full bg-gradient-to-l right-0 from-white to-transparent max-md:w-[12rem] w-[18rem] absolute"></div>
+          <div
+            className={` max-md:grid-cols-2 cards grid grid-cols-4 w-full gap-4`}
+          >
+            {testimonials.slice(0, 4).map(({ user, profession, message }) => {
+              return (
+                <CardTestimonal
+                  key={message}
+                  user={user}
+                  profesion={profession}
+                  message={message}
+                />
+              );
+            })}
+          </div>
+          <div className={`max-md:hidden grid cards w-full grid-cols-4 gap-4`}>
+            {testimonials.slice(4, 8).map(({ user, profession, message }) => {
+              return (
+                <CardTestimonal
+                  key={message}
+                  user={user}
+                  profesion={profession}
+                  message={message}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className={`max-md:hidden grid cards w-full grid-cols-4 gap-4`}>
-          {testimonials.slice(4, 8).map(({ user, profession, message }) => {
-            return (
-              <CardTestimonal
-                key={message}
-                user={user}
-                profesion={profession}
-                message={message}
-              />
-            );
-          })}
-        </div>
-      </div>
-      <Layout>
-        <div className="faq-section mt-[-7rem]">
+        <div className="faq-section mt-[6rem]">
           <header className="header-destination-section relative flex flex-col gap-2">
             <h3 className="w-fit category-content text-lg py-[4px]">
               StayInAja’s FAQ.
             </h3>
             <div className="slogan-destination flex justify-between">
-              <h1 className="slogan text-[2.5rem]">Most Asked by People.</h1>
+              <h1 className="slogan text-[2.5rem]">Most Asked.</h1>
               <p className="w-[24rem] text-justify">
                 If you have questions, we have answers for you here. In case we
                 don’t, please feel free to reach out to us here{" "}
