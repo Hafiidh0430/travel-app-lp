@@ -4,10 +4,10 @@ import Select from "./Select";
 export default function HeroDiscover() {
   return (
     <>
-      <div className="container_hero_discover relative w-full pt-[8rem] px-[4rem] max-md:px-[2rem] lg:px-[6rem]">
+      <div className="container_hero_discover relative w-full pt-[10rem] px-[4rem] max-md:px-[2rem] lg:px-[6rem]">
         <div className="wrapper_hero_discover gap-5 h-full flex flex-col items-center justify-center w-full">
           <h1 className="discover_hero_slogan leading-[4rem] text-center  text-black text-[4rem]">
-            Type, find and choose <br /> your styles.
+            Type, find, and choose <br /> your styles.
           </h1>
 
           <div className="input_search_discover flex flex-col gap-5 w-full ">

@@ -131,7 +131,7 @@ export default function Navigation() {
                   <Link
                     className={`${
                       data.PATH == location.pathname && "font-bold"
-                    }max-md:text-[2rem] text-sm`}
+                    } max-md:text-[2rem] text-sm`}
                     key={data.Address}
                     to={data.PATH}
                   >

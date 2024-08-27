@@ -2,7 +2,7 @@ import React, { memo } from "react";
 
 export default function Category({ category, setCategory }) {
   const categories = [
-    "Recomended",
+    "Recommended",
     "Bali",
     "Bogor",
     "Bandung",
@@ -17,7 +17,7 @@ export default function Category({ category, setCategory }) {
           return (
             <button
               key={data}
-              onClick={() => memo(setCategory(data), [])}
+              onClick={() => setCategory(data)}
               className={`categories max-md:text-sm  px-4 ${
                 data === category
                   ? "bg-slate-200 category-villa rounded-full"

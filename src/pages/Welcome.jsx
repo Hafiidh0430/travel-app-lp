@@ -151,7 +151,7 @@ export default function welcome() {
     },
   ];
 
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Recommended");
   const [accordion, setAccordion] = useState(Number);
 
   return (
@@ -199,7 +199,7 @@ export default function welcome() {
                 </a>
               </div>
             </header>
-            <div className="card-villas pb-4 overflow-x-auto flex gap-4">
+            <div className="card-villas pb-4 flex gap-4">
               {villas.map(({ name, price, location, rating, visitors }) => {
                 return (
                   <Card
@@ -254,7 +254,7 @@ export default function welcome() {
                 </a>
               </div>
             </header>
-            <div className="card-resorts pb-4 overflow-x-auto flex gap-4">
+            <div className="card-resorts pb-4 flex gap-4">
               {villas.map(({ name, price, location, rating, visitors }) => {
                 return (
                   <Card
