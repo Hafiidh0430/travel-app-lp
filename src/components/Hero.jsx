@@ -7,7 +7,7 @@ export default function Hero() {
     <>
       {/* <div className="hero w-full h-full absolute top-0 left-0 -z-10"></div> */}
 
-      <div className="welcome relative px-[4rem] justify-center flex-col flex items-center gap-8 max-md:px-[2rem] lg:px-[6rem] h-dvh w-full m-0 z-20 bg-slate-300">
+      <div className="welcome relative px-[4rem] justify-center flex-col flex items-center gap-6 max-md:px-[2rem] lg:px-[6rem] h-dvh w-full m-0 z-20 bg-slate-300">
         <div className="main-slogan flex w-full flex-col gap-4">
           <p className="text-slate-100 max-md:text-sm items-center gap-2 inline-flex">
             <span className="w-14 h-[1px] max-md:w-8 rounded-full bg-slate-100"></span>

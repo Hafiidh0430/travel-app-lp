@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navigation() {
   const [isSubNav, setIsSubNav] = useState(false);
   const [isNavScroll, setIsNavScroll] = useState(false);
+  const location = useLocation();
   const navigate = [
     {
       PATH: "/",
@@ -47,7 +48,7 @@ export default function Navigation() {
       <div
         className={`fixed md:hidden ${
           isNavScroll ? "text-black" : "text-slate-100"
-        } py-8 lg:hidden top-0 w-full z-50 ${
+        } py-6 lg:hidden top-0 w-full z-50 ${
           isSubNav && "bg-slate-50 h-dvh"
         } bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 px-5 `}
       >
@@ -96,8 +97,10 @@ export default function Navigation() {
                 <nav className="flex gap-10 h-max items-start flex-col mt-2 text-sm py-2">
                   {navigate.map((data) => {
                     return (
-                      <Link
-                        className="max-md:text-[2rem] text-sm"
+                      <Link onClick={() => setIsSubNav(false)}
+                        className={`${
+                          data.PATH == location.pathname && "font-bold"
+                        } max-md:text-[2rem] text-sm`}
                         key={data.Address}
                         to={data.PATH}
                       >
@@ -126,7 +129,9 @@ export default function Navigation() {
               {navigate.map((data) => {
                 return (
                   <Link
-                    className="max-md:text-[2rem] text-sm"
+                    className={`${
+                      data.PATH == location.pathname && "font-bold"
+                    }max-md:text-[2rem] text-sm`}
                     key={data.Address}
                     to={data.PATH}
                   >

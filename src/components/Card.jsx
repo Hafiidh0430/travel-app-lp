@@ -3,8 +3,8 @@ import React from "react";
 export default function Card({name, price, location, rating, visitors}) {
   return (
     <>
-      <a href="" className="card-container mt-8 flex flex-col gap-3">
-        <div className="bg-card w-[16rem] h-[16rem] rounded-xl bg-slate-300 relative">
+      <a href="" className="card-container mt-8 w-full flex flex-col gap-3">
+        <div className="bg-card w-full h-[16rem] rounded-xl bg-slate-300 relative">
           <h3 className="price max-md:text-[.7rem] max-md:px-3 max-md:py-1 text-sm absolute bottom-0 right-0 max-md:mb-2 max-md:mr-2 mb-3 mr-3 px-4 py-2 rounded-lg bg-slate-200">
             Rp. {price}
           </h3>
