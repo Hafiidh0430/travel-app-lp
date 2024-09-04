@@ -1,11 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../Layout";
 import HeroDiscover from "../components/HeroDiscover";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import CardDestination from "../components/CardDestination";
 export default function Discover() {
-  const villas = [
+  const destinationsObject = [
+    {
+      title: "Bali",
+      visitors: 14.672,
+    },
+    {
+      title: "Braga",
+      visitors: 12.52,
+    },
+    {
+      title: "Puncak",
+      visitors: 10.732,
+    },
+    {
+      title: "Borobudur",
+      visitors: 9.826,
+    },
+    {
+      title: "Wonosobo",
+      visitors: 6.034,
+    },
+    {
+      title: "Banyuwangi",
+      visitors: 2.562,
+    },
+    {
+      title: "Cibeureum",
+      visitors: 6.623,
+    },
+    {
+      title: "Lombok",
+      visitors: 4.823,
+    },
+  ];
+
+  const villasObject = [
     {
       name: "Arasatu Villas & Sanctuary",
       price: "3.450.063",
@@ -64,57 +99,46 @@ export default function Discover() {
     },
   ];
 
-  const destinations = [
-    {
-      title: "Bali",
-      visitors: 14.672,
-    },
-    {
-      title: "Braga",
-      visitors: 12.52,
-    },
-    {
-      title: "Puncak",
-      visitors: 10.732,
-    },
-    {
-      title: "Borobudur",
-      visitors: 9.826,
-    },
-    {
-      title: "Wonosobo",
-      visitors: 6.034,
-    },
-    {
-      title: "Banyuwangi",
-      visitors: 2.562,
-    },
-    {
-      title: "Cibeureum",
-      visitors: 6.623,
-    },
-    {
-      title: "Lombok",
-      visitors: 4.823,
-    },
-  ];
+  const [villas, setVillas] = useState(villasObject);
+  const [destinations, setDestinations] = useState(destinationsObject);
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredVilla, setFilteredVilla] = useState(villas);
+
+  useEffect(() => {
+    const debounce = setTimeout(() => {
+      if (searchInput !== "") {
+        const filtered = villas.filter((data) =>
+          data.name.toLowerCase().includes(searchInput.toLowerCase())
+        );
+        setFilteredVilla(filtered);
+      }
+    }, 800);
+    return () => {
+      clearTimeout(() => {
+        debounce;
+      }, 800);
+    };
+  }, [searchInput]);
+
   return (
     <>
-      <HeroDiscover />
+      <HeroDiscover searchInput={searchInput} setSearchInput={setSearchInput} />
       <Layout is_mt={false}>
         <div className="container_discover flex flex-col gap-4 items-center">
           <div className="card_discover_villa pb-[2rem] grid grid-cols-3 gap-4 lg:grid-cols-4 w-full h-fit">
-            {villas.map(({ name, price, location, rating, visitors }) => {
-              return (
-                <Card
-                  name={name}
-                  price={price}
-                  location={location}
-                  rating={rating}
-                  visitors={visitors}
-                />
-              );
-            })}
+            {filteredVilla?.map(
+              ({ name, price, location, rating, visitors }) => {
+                return (
+                  <Card
+                    name={name}
+                    price={price}
+                    location={location}
+                    rating={rating}
+                    visitors={visitors}
+                  />
+                );
+              }
+            )}
           </div>
           <button className="bg-black text-white px-6 rounded-full py-2">
             More places

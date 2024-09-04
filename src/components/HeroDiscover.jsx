@@ -1,7 +1,7 @@
 import React from "react";
 import Select from "./Select";
 
-export default function HeroDiscover() {
+export default function HeroDiscover({searchInput, setSearchInput}) {
   return (
     <>
       <div className="container_hero_discover relative w-full pt-[10rem] px-[4rem] max-md:px-[2rem] lg:px-[6rem]">
@@ -12,7 +12,7 @@ export default function HeroDiscover() {
 
           <div className="input_search_discover flex flex-col gap-5 w-full ">
             <div className="input w-full flex items-center gap-3">
-              <input
+              <input onChange={(e)=> setSearchInput(e.target.value)}
                 placeholder="Best villa in bandung"
                 className="w-full bg-transparent border-slate-300 px-4 py-2 outline-none border rounded-full"
                 type="text"

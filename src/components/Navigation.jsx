@@ -97,7 +97,8 @@ export default function Navigation() {
                 <nav className="flex gap-10 h-max items-start flex-col mt-2 text-sm py-2">
                   {navigate.map((data) => {
                     return (
-                      <Link onClick={() => setIsSubNav(false)}
+                      <Link
+                        onClick={() => setIsSubNav(false)}
                         className={`${
                           data.PATH == location.pathname && "font-bold"
                         } max-md:text-[2rem] text-sm`}
@@ -120,7 +121,7 @@ export default function Navigation() {
           isNavScroll ? "text-black" : "text-slate-100"
         } py-4 top-0 w-full z-50 ${
           isSubNav && "bg-slate-50 h-dvh"
-        } bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20   px-[4rem] max-md:px-[2rem] lg:px-[6rem]`}
+        } bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 px-[4rem] max-md:px-[2rem] lg:px-[6rem]`}
       >
         <div className="container_nav h-full flex flex-col w-full items-start justify-between ">
           <div className="flex items-center w-full justify-between">

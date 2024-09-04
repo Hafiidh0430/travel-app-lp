@@ -106,11 +106,11 @@
 }
 
 /* HD (1366x768 piksel) */
-/* @media screen and (min-width: 1366px) and (max-width: 1599px) {
+@media screen and (min-width: 1366px) and (max-width: 3080px) {
   :root {
     font-size: 1.1vw;
   }
-} */
+}
 
 /* Full HD (1920x1080 piksel) */
 /* @media screen and (min-width: 1600px) and (max-width: 1919px) {
